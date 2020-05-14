@@ -1,7 +1,7 @@
-require 'timer'
+require 'reverse'
 
 
-describe Timer do
+describe Reverse do
   
   subject(:double) { described_class.new }
 
