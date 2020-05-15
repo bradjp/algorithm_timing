@@ -1,10 +1,8 @@
-class Timer
+require_relative 'reverse'
 
-  def code_timer(method, input)
-    timer = Timer.new
-    start = Time.now
-    timer.send(method, input)
-    Time.now - start
-  end
-
+def code_timer(method, input)
+  x = Reverse.new
+  start = Time.now
+  x.send(method, input)
+  Time.now - start
 end
