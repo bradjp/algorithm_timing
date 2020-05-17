@@ -1,14 +1,11 @@
 require_relative 'reverse'
 
-def code_timer(method, array_size, no_of_tests)
-
+def code_timer(method, array_size, _no_of_tests)
   arr = []
 
   array_size.times { arr << 0 }
 
-   run_timer(method, arr)
-  
-
+  run_timer(method, arr)
 end
 
 def run_timer(method, arr)
