@@ -1,7 +1,6 @@
 require_relative 'reverse'
 
 def code_timer(method, input)
-  x = Reverse.new
 
   five_k = []
   ten_k = []
@@ -15,26 +14,16 @@ def code_timer(method, input)
   20000.times { twenty_k << input }
   25000.times { twenty_five_k << input }
 
-  start = Time.now
-  x.send(method, five_k)
-  five_k_time = Time.now - start
+  five_k_time = run_timer(method, five_k)
   
-  start = Time.now
-  x.send(method, ten_k)
-  ten_k_time = Time.now - start
+  ten_k_time = run_timer(method, ten_k)
   
-  start = Time.now
-  x.send(method, fifteen_k)
-  fifteen_k_time = Time.now - start
+  fifteen_k_time = run_timer(method, fifteen_k)
   
-  start = Time.now
-  x.send(method, twenty_k)
-  twenty_k_time = Time.now - start
-  
-  start = Time.now
-  x.send(method, twenty_five_k)
-  twenty_five_k_time = Time.now - start
+  twenty_k_time = run_timer(method, twenty_k)
 
+  twenty_five_k_time = run_timer(method, twenty_five_k)
+  
   puts "Time\n\n----\n
   \n5,000 item array: #{five_k_time}
   \n10,000 item array: #{ten_k_time}
@@ -42,4 +31,11 @@ def code_timer(method, input)
   \n20,000 item array: #{twenty_k_time}
   \n25,000 item array: #{twenty_five_k_time}"
 
+end
+
+def run_timer(method, input)
+  x = Reverse.new
+  start = Time.now
+  x.send(method, input)
+  output = Time.now - start
 end
