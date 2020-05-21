@@ -35,5 +35,5 @@ def run_timer(method, input)
   x = Reverse.new
   start = Time.now
   x.send(method, input)
-  output = Time.now - start
+  Time.now - start
 end

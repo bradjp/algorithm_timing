@@ -9,7 +9,6 @@ def code_timer(method, array_size, no_of_runs)
   no_of_runs.times { test_results << run_timer(method, arr) }
 
   print_results(test_results)
-
 end
 
 def run_timer(method, arr)
@@ -20,7 +19,7 @@ def run_timer(method, arr)
 end
 
 def average_time(results)
-  results.inject(:+) / results.length 
+  results.inject(:+) / results.length
 end
 
 def print_results(results)
