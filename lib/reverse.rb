@@ -1,4 +1,5 @@
 class Reverse
+
   def reverse_two(arr)
     reversed_array = []
 
@@ -8,4 +9,10 @@ class Reverse
     end
     reversed_array
   end
+
+  def reverse_three(arr)
+    arr
+  end
+
+
 end
