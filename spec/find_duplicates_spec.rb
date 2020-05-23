@@ -14,6 +14,9 @@ describe Find_duplicates do
     it "returns repeated word" do
       expect(subject.find_duplicates(['hello', 'world', 'hello'])).to eq('hello')
     end
+    it "returns multiple repeated words" do
+      expect(subject.find_duplicates(['hello', 'world', 'hello', 'echo', 'echo'])).to eq('hello, echo')
+    end
   end
 
 end

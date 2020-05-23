@@ -20,7 +20,7 @@ class Find_duplicates
       end
     end
 
-    dupes.empty? ? 'No duplicates' : dupes.join
+    dupes.empty? ? 'No duplicates' : dupes.join(', ')
 
   end
 
