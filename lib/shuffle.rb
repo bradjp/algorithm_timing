@@ -15,7 +15,17 @@ class Shuffle
   end
 
   def shuffle_three(arr)
-    arr
+
+    x = []
+
+    hash = {}
+
+    arr.each { |el| hash[srand] = el }
+
+    hash.sort_by { |k,v| k }
+    .map { |k, v| x << v }
+
+    x
   end
 
 end
