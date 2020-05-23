@@ -11,6 +11,9 @@ describe Find_duplicates do
     it "returns 'No duplicates' when input contains no repeated words" do
       expect(subject.find_duplicates(['hello', 'world'])).to eq('No duplicates')
     end
+    it "returns repeated word" do
+      expect(subject.find_duplicates(['hello', 'world', 'hello'])).to eq('hello')
+    end
   end
 
 end
