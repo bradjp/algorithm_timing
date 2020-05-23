@@ -14,4 +14,8 @@ class Shuffle
 
   end
 
+  def shuffle_three(arr)
+    arr
+  end
+
 end

@@ -1,4 +1,5 @@
 require_relative 'reverse'
+require_relative 'shuffle'
 
 def code_timer(method, array_size, no_of_runs)
   arr = []
