@@ -20,13 +20,8 @@ class Find_duplicates
       end
     end
 
-    if dupes.empty?
-      'No duplicates'
-    else
-      dupes.join
-    end
+    dupes.empty? ? 'No duplicates' : dupes.join
 
   end
-
 
 end
