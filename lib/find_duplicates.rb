@@ -1,9 +1,7 @@
 class Find_duplicates
-
   def find_duplicates(arr)
-
     dupes = []
-    
+
     hash = {}
 
     arr.each do |el|
@@ -15,13 +13,9 @@ class Find_duplicates
     end
 
     hash.each_key do |key|
-      if hash[key] > 1
-      dupes << key
-      end
+      dupes << key if hash[key] > 1
     end
 
     dupes.empty? ? 'No duplicates' : dupes.join(', ')
-
   end
-
 end
