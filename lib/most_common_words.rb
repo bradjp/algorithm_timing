@@ -1,6 +1,6 @@
 class Most_common_words
 
   def most_common_words(arr)
-    nil
+    arr.length > 1 ? arr : nil
   end
 end

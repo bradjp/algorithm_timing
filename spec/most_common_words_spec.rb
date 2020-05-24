@@ -11,6 +11,9 @@ describe Most_common_words do
     it 'returns nil with a one-item array' do
       expect(subject.most_common_words(['Hello'])).to eq(nil)
     end
+    it 'returns both items of a two-item array' do
+      expect(subject.most_common_words(['Hello', 'world'])).to eq(['Hello', 'world'])
+    end
   end
 
 end
