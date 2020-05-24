@@ -8,6 +8,9 @@ describe Most_common_words do
     it 'returns nil with an empty array' do
       expect(subject.most_common_words([])).to eq(nil)
     end
+    it 'returns nil with a one-item array' do
+      expect(subject.most_common_words(['Hello'])).to eq(nil)
+    end
   end
 
 end
