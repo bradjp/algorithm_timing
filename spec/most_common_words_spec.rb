@@ -14,6 +14,9 @@ describe Most_common_words do
     it 'returns both items of a two-item array' do
       expect(subject.most_common_words(['Hello', 'world'])).to eq(['Hello', 'world'])
     end
+    it 'returns the two most common items of an array' do
+      expect(subject.most_common_words(['Hello', 'world', 'Hello', 'world', 'single'])).to eq(['Hello', 'world'])
+    end
   end
 
 end
